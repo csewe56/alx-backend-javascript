@@ -1,4 +1,13 @@
-import handleResponseFromAPI from "./2-then";
+function getResponseFromAPI() {
+  return new Promise((resolve, reject) => {
+    /*eslint-disable */
+    if (true) {
+      resolve();
+    } else {
+      reject();
+    }
+    /* eslint-enable */
+  });
+}
 
-const promise = Promise.resolve();
-handleResponseFromAPI(promise);
+export default getResponseFromAPI;
