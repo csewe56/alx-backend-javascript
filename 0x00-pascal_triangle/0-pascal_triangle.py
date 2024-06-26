@@ -16,3 +16,5 @@ def pascal_triangle(n):
 
     return triangle
 
+for row in pascal_triangle(5):
+    print(row)
