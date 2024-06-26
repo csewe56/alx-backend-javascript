@@ -5,19 +5,14 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    
-    triangle = []  # Initialize an empty list to hold the rows of Pascal's triangle
 
-    for i in range(n):  # Iterate over the range of rows
-        row = [1] * (i + 1)  # Start each row with 1's
-        for j in range(1, i):  # Iterate over the columns of the current row
-            # Each number is the sum of the two numbers directly above it
+    triangle = []
+
+    for i in range(n):
+        row = [1] * (i + 1)
+        for j in range(1, i):
             row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
-        triangle.append(row)  # Add the current row to the triangle
+        triangle.append(row)
 
     return triangle
-
-# Testing the function
-for row in pascal_triangle(5):
-    print(row)
 
